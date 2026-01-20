@@ -414,7 +414,7 @@ __global__ void MatrixMultiplyKernel(
    * - Only read each cell in a and b once.
    * - Only write to global memory once per kernel.
    * There is guarantee that a_shape[0] == b_shape[0], a_shape[2] == b_shape[1],
-   * and out_shape[0] == a_shape[0], out_shape[1] == b_shape[1]
+   * and out_shape[0] == a_shape[0], out_shape[1] == a_shape[1], out_shape[2] == b_shape[2].
    *
    * Args:
    *   out: compact 1D array of size batch_size x m x p to write the output to
