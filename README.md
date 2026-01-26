@@ -285,7 +285,7 @@ __global__ void mm(float A[N][N], float B[N][N], float C[N][N]) {
         sA[:, :] = A[i:i+S, ks:ks+L];
         sB[:, :] = B[i:i+S, ks:ks+L];
         __syncthreads();
-        for (int ki = 0; ki < L; ++kk) {
+        for (int ki = 0; ki < L; ++ki) {
             tC[:] += sA[:][ki] * sB[ki][:];
         }
         __syncthreads();
