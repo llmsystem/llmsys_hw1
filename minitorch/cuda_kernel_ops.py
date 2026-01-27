@@ -153,7 +153,7 @@ class CudaKernelOps(TensorOps):
                 np.ctypeslib.ndpointer(dtype=np.int32, ndim=1, flags='C_CONTIGUOUS'),    # in_shape
                 np.ctypeslib.ndpointer(dtype=np.int32, ndim=1, flags='C_CONTIGUOUS'),    # in_strides
                 ctypes.c_int,                                                            # reduce_dim
-                ctypes.c_double,                                                         # reduce_value
+                ctypes.c_float,                                                          # reduce_value
                 ctypes.c_int,                                                            # shape_len
                 ctypes.c_int,                                                            # fn_id
             ]
