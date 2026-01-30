@@ -264,7 +264,7 @@ __global__ void mm(float A[N][N], float B[N][N], float C[N][N]) {
         for (int k = 0; k < N; k++) {
             sum += A[row][k] * B[k][col];
         }
-        out[row][col] = sum;
+        C[row][col] = sum;
     }
 }
 ```
